@@ -1,0 +1,26 @@
+<%- include('partials/header'); -%>
+
+<div class="container">
+    <div>
+        <h1 class="header_title"><%-title%></h1>
+    </div>
+    <div>
+        <form action="/work" method="post">
+
+            
+           <% workItems.forEach((workItem)=>{ %>
+             <div class="form_group">
+                <input name="addedItem" type="checkbox">
+                <p class="added_item"><%-workItem%></p>
+            </div>
+           <% })  %>
+            
+            <div class="form_group">
+                <input class="new_item" name="newItem" type="text">
+                <button class="button" type="submit" name="list" value="<%-title%>">+</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include('partials/footer'); -%>

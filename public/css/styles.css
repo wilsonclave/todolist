@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1rem;
+}
+body {
+    background-color: #edf1fd;
+}
+
+form{
+    background-color: #fff;
+    width: 515px;
+    border-radius: 10px;
+    padding: 1em 0;
+    box-shadow: 5px 5px 5px #cad0e4ad;
+}
+
+input[type=checkbox]:checked + p {
+    text-decoration: line-through;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 4em 0 2em;
+    width: 100%;
+}
+
+.header_title{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    color: #fff;
+    background-color: #39aefcbb;
+    padding: 0.25em 2em;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    width: 515px;
+    text-align: center;
+    box-shadow: 5px 5px 5px #cad0e4ad;
+}
+
+.added_item {
+    display: inline;
+    margin-left: 1em;
+    font-size: 1.5rem;
+}
+
+.new_item{
+    width:90%;
+    padding: 0.5em 3em;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    border-bottom: 5px solid #39aefcbb;
+}
+
+.button {
+    display: inline;
+    background-color: #39aefcbb;
+    font-size: 1.5rem;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding:.25em .5em;
+    border-radius: 50%;
+}
+.form_group{
+    padding: .1em 2em;
+    margin: 1em 0 2em;
+}
+
+.form_group:not(:last-child){
+    border-bottom: 1px solid #edf1fd;
+    padding: 1em 2em;
+}
