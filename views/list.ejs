@@ -4,17 +4,17 @@
     <div>
         <h1 class="header_title"><%-title%></h1>
     </div>
-    <div>
-        <form action="/" method="post">
-
+    <div class="box">
+        <% items.forEach((item)=>{ %>
+            <form action="/delete" method="post">
+                <div class="form_group">
+                    <input onChange="this.form.submit()" type="checkbox" name="list" value="<%=title%>">
+                    <p class="added_item"><%-item%></p>
+                </div>
+            </form>
+        <% }) %>
             
-          <% items.forEach((item)=>{ %>
-              <div class="form_group">
-                <input name="addedItem" type="checkbox">
-                <p class="added_item"><%-item%></p>
-            </div>
-          <% }) %>
-            
+        <form action="/" method="post">    
             <div class="form_group">
                 <input class="new_item" name="newItem" type="text">
                 <button class="button" type="submit" name="list" value="<%-title%>">+</button>

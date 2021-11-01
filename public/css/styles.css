@@ -14,14 +14,6 @@ body {
     background-color: #edf1fd;
 }
 
-form{
-    background-color: #fff;
-    width: 515px;
-    border-radius: 10px;
-    padding: 1em 0;
-    box-shadow: 5px 5px 5px #cad0e4ad;
-}
-
 input[type=checkbox]:checked + p {
     text-decoration: line-through;
 }
@@ -51,6 +43,14 @@ footer {
     margin-bottom: 1em;
     width: 515px;
     text-align: center;
+    box-shadow: 5px 5px 5px #cad0e4ad;
+}
+
+.box{
+    background-color: #fff;
+    width: 515px;
+    border-radius: 10px;
+    padding: 1em 0;
     box-shadow: 5px 5px 5px #cad0e4ad;
 }
 

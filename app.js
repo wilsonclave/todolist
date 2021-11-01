@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const _ = require('lodash');
-const date = require(__dirname + '/date.js')
+
 
 const items=[];
 const workItems = [];
@@ -15,25 +15,34 @@ app.use(express.static('public'));
 
 
 app.get('/', (req, res)=>{
-    const today = date.getDay();
-    res.render('list', {title:today, items:items})
+    
+    res.render('list', {title:"Today", items:items})
 });
 
 app.post('/', (req, res)=>{
     const item = req.body.newItem;
+    const listTitle = req.body.list;
 
-    if(req.body.list === "Work List") {
-        workItems.push(item);
-        res.redirect('/work')
-    } else {
+    if(listTitle === "Today") {
         items.push(item);
         res.redirect('/');
+    } else {
+        workItems.push(item);
+        res.render('list',{title:listTitle, items:workItems})
     }
 });
 
+app.post('/delete', (req, res)=>{
+    const checkedItem = req.body.list;
+    console.log(checkedItem);
+
+   
+
+})
+
 
 app.get('/work', (req, res)=>{
-    res.render('list', {title:"Work List", items:workItems})
+    res.render('list', {title:"Work", items:workItems})
 });
 
 
