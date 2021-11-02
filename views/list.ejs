@@ -8,16 +8,17 @@
         <% items.forEach((item)=>{ %>
             <form action="/delete" method="post">
                 <div class="form_group">
-                    <input onChange="this.form.submit()" type="checkbox" name="list" value="<%=title%>">
-                    <p class="added_item"><%-item%></p>
+                    <input onChange="this.form.submit()" type="checkbox" name="checkbox" value="<%=item._id%>">
+                    <input type="hidden" name="list" value="<%=title%>">
+                    <p class="added_item"><%-item.name%></p>
                 </div>
             </form>
         <% }) %>
             
         <form action="/" method="post">    
             <div class="form_group">
-                <input class="new_item" name="newItem" type="text">
-                <button class="button" type="submit" name="list" value="<%-title%>">+</button>
+                <input class="new_item" name="newItem" type="text" placeholder="Add Item">
+                <button class="button" type="submit" name="list" value="<%-title%>" >+</button>
             </div>
         </form>
     </div>
